@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Translator" basedir="." default="usage">
+
+	<property name="name" value="translator" />
+
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="bin" />
+
+	<property name="src.test.dir" value="test" />
+	<property name="build.test.dir" value="bin-test" />
+
+	<path id="master-classpath">
+		<fileset dir="${basedir}/lib">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement path="${build.dir}" />
+		<pathelement path="${build.test.dir}" />
+	</path>
+
+	<target name="usage">
+		<echo message="" />
+		<echo message="${name} build file" />
+		<echo message="------------------------------------------------------" />
+		<echo message="Available targets are:" />
+		<echo message="" />
+		<echo message="build        --> Build the application" />
+		<echo message="run          --> Run project" />
+		<echo message="clean        --> Clean the output directories" />
+		<echo message="test         --> Run JUnit Tests" />
+		<echo message="" />
+	</target>
+
+	<target name="build" depends="copy-resources" description="Compile main source tree java files">
+		<javac destdir="${build.dir}" source="1.7" target="1.7" debug="true" deprecation="false" optimize="false"
+			failonerror="true" includeantruntime="false">
+			<src path="${src.dir}" />
+			<classpath refid="master-classpath" />
+		</javac>
+	</target>
+	
+	<target name="run" depends="build" description="Run project">
+		<echo>Run java</echo>
+		<java classname="dict.MainActivity">
+			<classpath refid="master-classpath" />
+		</java>
+	</target>
+	
+	<target name="copy-resources">
+		<copy todir="${build.dir}">
+			<fileset dir="${src.dir}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean" description="Clean output directories">
+		<delete dir="${build.dir}" />
+		<delete dir="${build.test.dir}" />
+	</target>
+
+	<target name="build-test" depends="copy-test-resources" description="Compile test source tree java files">
+		<mkdir dir="${build.test.dir}" />
+		<javac destdir="${build.test.dir}" source="1.7" target="1.7" debug="true" deprecation="false" optimize="false"
+			failonerror="true" includeantruntime="false">
+			<src path="${src.test.dir}" />
+			<classpath refid="master-classpath" />
+		</javac>
+	</target>
+
+	<target name="copy-test-resources">
+		<copy todir="${build.dir}">
+			<fileset dir="${src.dir}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="test" depends="build, build-test" description="Run JUnit Tests">
+		<junit printsummary="on" fork="false" haltonfailure="false" failureproperty="tests.failed" showoutput="true">
+			<classpath refid="master-classpath" />
+			<formatter type="brief" usefile="false" />
+			<batchtest>
+				<fileset dir="${build.test.dir}">
+					<include name="**/*Test.class" />
+				</fileset>
+			</batchtest>
+
+		</junit>
+
+		<fail if="tests.failed">
+			tests.failed=${tests.failed}
+			***********************************************************
+			***********************************************************
+			**** One or more tests failed! Check the output ... ****
+			***********************************************************
+			***********************************************************
+		</fail>
+	</target>
+
+</project>
