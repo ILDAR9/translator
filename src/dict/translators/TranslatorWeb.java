@@ -20,15 +20,15 @@ import org.xml.sax.SAXException;
 
 import dict.Messages;
 import dict.exceptions.language.LanguageSyntaxException;
-import dict.translators.cache.TranslatorCache;
+import dict.translators.cache.Cache;
 
 public class TranslatorWeb implements Translator {
 	private final static String API = "http://translate.yandex.net/api/v1/tr/translate?lang=en-ru&text=";
 	private final static Logger logger = LoggerFactory.getLogger(TranslatorWeb.class);
-	private TranslatorCache wayToDictBD;
+	private Cache wayToDictBD;
 
-	// constructor returns object which can collect new words into Cache
-	public TranslatorWeb(TranslatorCache wayToDictBD) {
+	// constructor returns object which can collect new words into RAM Cache
+	public TranslatorWeb(Cache wayToDictBD) {
 		this.wayToDictBD = wayToDictBD;
 	}
 

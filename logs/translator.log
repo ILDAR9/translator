@@ -1,0 +1,88 @@
+[2013-03-20 03:19:31,444] DEBUG: [dict.translators.cache.TranslatorCache.<init>(TranslatorCache.java:46)]: File translates.txt is created 
+[2013-03-20 03:19:35,704] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:113)]: CacheFile doesn't cointain translate for word: dog 
+[2013-03-20 03:19:35,783] INFO: [dict.MainActivity.main(MainActivity.java:51)]: Translated dog: собака 
+[2013-03-20 03:19:41,679] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:113)]: CacheFile doesn't cointain translate for word: fucken 
+[2013-03-20 03:19:41,718] INFO: [dict.MainActivity.main(MainActivity.java:51)]: Translated fucken: ебаный 
+[2013-03-20 03:19:45,734] INFO: [dict.MainActivity.main(MainActivity.java:33)]: exit 
+[2013-03-21 00:23:27,397] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: dog 
+[2013-03-21 00:23:27,473] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: computer 
+[2013-03-21 00:23:27,477] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: water 
+[2013-03-21 00:23:27,482] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: tube 
+[2013-03-21 00:29:17,976] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: god 
+[2013-03-21 00:29:17,979] ERROR: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:101)]: class dict.exceptions.InvalidFormatException exception was caught while attempting to to create file: translates.txt 
+dict.exceptions.InvalidFormatException
+	at dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:82)
+	at dict.translators.TranslatorThread.run(TranslatorThread.java:14)
+[2013-03-21 00:29:17,981] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: god 
+[2013-03-21 00:29:18,057] INFO: [dict.MainActivity.main(MainActivity.java:79)]: NO translate for god 
+[2013-03-21 00:29:24,533] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: dog 
+[2013-03-21 00:29:24,534] ERROR: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:101)]: class dict.exceptions.InvalidFormatException exception was caught while attempting to to create file: translates.txt 
+dict.exceptions.InvalidFormatException
+	at dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:82)
+	at dict.translators.TranslatorThread.run(TranslatorThread.java:14)
+[2013-03-21 00:29:24,536] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: dog 
+[2013-03-21 00:29:24,577] INFO: [dict.MainActivity.main(MainActivity.java:79)]: NO translate for dog 
+[2013-03-21 00:29:25,965] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: cat 
+[2013-03-21 00:29:25,966] ERROR: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:101)]: class dict.exceptions.InvalidFormatException exception was caught while attempting to to create file: translates.txt 
+dict.exceptions.InvalidFormatException
+	at dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:82)
+	at dict.translators.TranslatorThread.run(TranslatorThread.java:14)
+[2013-03-21 00:29:25,966] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: cat 
+[2013-03-21 00:29:25,991] INFO: [dict.MainActivity.main(MainActivity.java:79)]: NO translate for cat 
+[2013-03-21 00:29:28,115] INFO: [dict.MainActivity.main(MainActivity.java:39)]: exit 
+[2013-03-21 00:31:45,087] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: dog 
+[2013-03-21 00:31:45,090] ERROR: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:101)]: class dict.exceptions.InvalidFormatException exception was caught while attempting to to create file: translates.txt 
+dict.exceptions.InvalidFormatException
+	at dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:82)
+	at dict.translators.TranslatorThread.run(TranslatorThread.java:14)
+[2013-03-21 00:31:45,092] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: dog 
+[2013-03-21 00:31:45,171] INFO: [dict.MainActivity.main(MainActivity.java:87)]: Translated dog: собака 
+[2013-03-21 00:31:48,644] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: help 
+[2013-03-21 00:31:48,645] ERROR: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:101)]: class dict.exceptions.InvalidFormatException exception was caught while attempting to to create file: translates.txt 
+dict.exceptions.InvalidFormatException
+	at dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:82)
+	at dict.translators.TranslatorThread.run(TranslatorThread.java:14)
+[2013-03-21 00:31:48,647] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: help 
+[2013-03-21 00:31:48,672] INFO: [dict.MainActivity.main(MainActivity.java:87)]: Translated help: помощь 
+[2013-03-21 00:31:51,092] INFO: [dict.MainActivity.main(MainActivity.java:87)]: Translated help: помощь 
+[2013-03-21 00:31:53,228] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: cat 
+[2013-03-21 00:31:53,229] ERROR: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:101)]: class dict.exceptions.InvalidFormatException exception was caught while attempting to to create file: translates.txt 
+dict.exceptions.InvalidFormatException
+	at dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:82)
+	at dict.translators.TranslatorThread.run(TranslatorThread.java:14)
+[2013-03-21 00:31:53,229] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: cat 
+[2013-03-21 00:31:53,259] INFO: [dict.MainActivity.main(MainActivity.java:87)]: Translated cat: кошка 
+[2013-03-21 00:31:57,284] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: fe 
+[2013-03-21 00:31:57,285] ERROR: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:101)]: class dict.exceptions.InvalidFormatException exception was caught while attempting to to create file: translates.txt 
+dict.exceptions.InvalidFormatException
+	at dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:82)
+	at dict.translators.TranslatorThread.run(TranslatorThread.java:14)
+[2013-03-21 00:31:57,286] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: fe 
+[2013-03-21 00:31:57,311] INFO: [dict.MainActivity.main(MainActivity.java:87)]: Translated fe: ИП 
+[2013-03-21 00:31:59,892] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: asdw 
+[2013-03-21 00:31:59,893] ERROR: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:101)]: class dict.exceptions.InvalidFormatException exception was caught while attempting to to create file: translates.txt 
+dict.exceptions.InvalidFormatException
+	at dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:82)
+	at dict.translators.TranslatorThread.run(TranslatorThread.java:14)
+[2013-03-21 00:31:59,893] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: asdw 
+[2013-03-21 00:31:59,919] INFO: [dict.MainActivity.main(MainActivity.java:81)]: NO translate for asdw 
+[2013-03-21 00:32:04,820] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: join 
+[2013-03-21 00:32:04,821] ERROR: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:101)]: class dict.exceptions.InvalidFormatException exception was caught while attempting to to create file: translates.txt 
+dict.exceptions.InvalidFormatException
+	at dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:82)
+	at dict.translators.TranslatorThread.run(TranslatorThread.java:14)
+[2013-03-21 00:32:04,821] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: join 
+[2013-03-21 00:32:04,847] INFO: [dict.MainActivity.main(MainActivity.java:87)]: Translated join: присоединиться 
+[2013-03-21 00:32:08,466] INFO: [dict.MainActivity.main(MainActivity.java:39)]: exit 
+[2013-03-21 00:35:55,455] DEBUG: [dict.translators.cache.TranslatorCache.<init>(TranslatorCache.java:43)]: File translates.txt is created 
+[2013-03-21 00:36:00,298] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: fuck 
+[2013-03-21 00:36:00,300] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: fuck 
+[2013-03-21 00:36:00,384] INFO: [dict.MainActivity.main(MainActivity.java:81)]: NO translate for fuck 
+[2013-03-21 00:36:19,739] INFO: [dict.MainActivity.main(MainActivity.java:39)]: exit 
+[2013-03-21 00:37:20,941] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: dog 
+[2013-03-21 00:37:20,946] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: dog 
+[2013-03-21 00:37:21,023] INFO: [dict.MainActivity.main(MainActivity.java:81)]: NO translate for dog 
+[2013-03-21 00:37:31,777] DEBUG: [dict.translators.cache.TranslatorRAMCache.translate(TranslatorRAMCache.java:44)]: RAMCache doesn't cointain translate for word: exiot 
+[2013-03-21 00:37:31,778] DEBUG: [dict.translators.cache.TranslatorCache.translate(TranslatorCache.java:107)]: CacheFile doesn't cointain translate for word: exiot 
+[2013-03-21 00:37:31,826] INFO: [dict.MainActivity.main(MainActivity.java:81)]: NO translate for exiot 
+[2013-03-21 00:37:33,417] INFO: [dict.MainActivity.main(MainActivity.java:39)]: exit 

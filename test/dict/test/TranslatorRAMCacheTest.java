@@ -2,15 +2,9 @@ package dict.test;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
 
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,27 +14,21 @@ import org.junit.runners.Parameterized.Parameters;
 import dict.exceptions.language.LanguageSyntaxException;
 import dict.exceptions.language.NotEnglishWordException;
 import dict.exceptions.language.NotRussianWordException;
-import dict.translators.cache.TranslatorCache;
+import dict.translators.cache.TranslatorRAMCache;
 
 @RunWith(Parameterized.class)
-public class TranslatorCacheTest {
-	final static File testFile = new File("test.txt");
-	static TranslatorCache trans;
+public class TranslatorRAMCacheTest {
+	static TranslatorRAMCache trans;
 	private String pExpected;
 	private String pEn;
 
 	@BeforeClass
 	public static void initialFile() throws Exception {
-		List<String> words = new LinkedList<>();
-		words.add("dog=собака");
-		words.add("computer=компьютер");
-		words.add("water=вода");
-		words.add("tube=труба");
-		try (PrintWriter writer = new PrintWriter(testFile)) {
-			for (String word : words)
-				writer.println(word);
-		}
-		trans = new TranslatorCache(testFile.toString());
+		trans = new TranslatorRAMCache();
+		trans.addWord("dog", "собака");
+		trans.addWord("computer", "компьютер");
+		trans.addWord("water", "вода");
+		trans.addWord("tube", "труба");
 	}
 
 	@Parameters
@@ -50,7 +38,7 @@ public class TranslatorCacheTest {
 	}
 
 	// start param test
-	public TranslatorCacheTest(String pExpected, String pEn) {
+	public TranslatorRAMCacheTest(String pExpected, String pEn) {
 		this.pExpected = pExpected;
 		this.pEn = pEn;
 	}
@@ -74,10 +62,4 @@ public class TranslatorCacheTest {
 		trans.addWord("дом", "домик");
 	}
 
-	@AfterClass
-	public static void deleteTest() throws IOException {
-		if (testFile.exists()) {
-			testFile.delete();
-		}
-	}
 }
